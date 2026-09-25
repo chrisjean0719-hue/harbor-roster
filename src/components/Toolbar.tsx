@@ -30,7 +30,7 @@ export function Toolbar({ weekStart, filter, shiftCount, status, onFilter, onWee
         </div>
         <div>
           <h1 className="toolbar__title">{formatWeekRange(weekStart)}</h1>
-          <p className="toolbar__meta">{shiftCount} shifts this week</p>
+          <p className="toolbar__meta">{`${shiftCount} ${shiftCount === 1 ? 'shift' : 'shifts'} this week`}</p>
         </div>
       </div>
 

@@ -32,7 +32,9 @@ export function AppShell({ children }: { children: ReactNode }) {
           <span>Harbor Roster</span>
         </div>
         <div className="topbar__clinic">{CLINIC.name}</div>
-        <div className="topbar__avatar" aria-label="Signed in as Ana Ruiz">AR</div>
+        <div className="topbar__avatar" role="img" aria-label="Signed in as Ana Ruiz">
+          AR
+        </div>
       </header>
 
       <aside className="sidebar" aria-label="Main navigation">

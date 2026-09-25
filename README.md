@@ -15,17 +15,19 @@ filter it by role, and act on individual shifts (mark open, swap, delete) from a
 
 ## Getting started
 
+Requires Node.js 22.12 or newer.
+
 ```bash
 npm install
 npm run dev        # http://localhost:5173
 ```
 
-| Script          | What it does                               |
-| --------------- | ------------------------------------------ |
-| `npm run dev`   | Vite dev server                            |
-| `npm run build` | Type-check and production build            |
-| `npm test`      | Unit tests (Vitest)                        |
-| `npm run e2e`   | Playwright smoke tests (desktop + mobile)  |
+| Script          | What it does                                                               |
+| --------------- | -------------------------------------------------------------------------- |
+| `npm run dev`   | Vite dev server                                                            |
+| `npm run build` | Type-check and production build                                            |
+| `npm test`      | Unit tests (Vitest)                                                        |
+| `npm run e2e`   | Playwright smoke tests (desktop + mobile) on their own dev server at :5179 |
 
 Run `npx playwright install chromium` once before the first `npm run e2e`.
 

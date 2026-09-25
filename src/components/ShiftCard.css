@@ -63,3 +63,8 @@
 .shift__more[aria-expanded='true'] {
   background: rgb(0 0 0 / 0.08);
 }
+
+/* The card clips overflow, so draw the focus ring inside the button. */
+.shift__more:focus-visible {
+  outline-offset: -2px;
+}

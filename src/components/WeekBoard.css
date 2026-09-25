@@ -13,6 +13,7 @@
 .board__row {
   display: grid;
   grid-template-columns: var(--gutter-w) repeat(7, minmax(var(--col-min), 1fr));
+  min-width: min-content;
 }
 
 .board__head {
