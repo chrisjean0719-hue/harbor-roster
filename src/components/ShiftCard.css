@@ -1,0 +1,65 @@
+.shift {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 4px 6px 4px 8px;
+  border: 1px solid var(--role-border);
+  border-left-width: 4px;
+  border-radius: var(--radius-sm);
+  background: var(--role-bg);
+  color: var(--role-fg);
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.shift.is-open {
+  border-style: dashed;
+  border-left-style: solid;
+  background: var(--surface);
+}
+
+.shift__name {
+  padding-right: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shift__time {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.85;
+}
+
+.shift__note {
+  margin-top: 4px;
+  font-size: 11px;
+  opacity: 0.75;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shift__more {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.shift__more:hover,
+.shift__more[aria-expanded='true'] {
+  background: rgb(0 0 0 / 0.08);
+}

@@ -1,0 +1,116 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  margin: 16px 20px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.board__row {
+  display: grid;
+  grid-template-columns: var(--gutter-w) repeat(7, minmax(var(--col-min), 1fr));
+}
+
+.board__head {
+  flex: none;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-strong);
+  background: var(--surface);
+}
+
+.board__corner {
+  position: sticky;
+  left: 0;
+  z-index: var(--z-sticky);
+  background: var(--surface);
+}
+
+.board__day {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 8px;
+  align-items: baseline;
+  padding: 10px 12px;
+  border-left: 1px solid var(--border);
+}
+
+.board__day.is-weekend {
+  background: var(--weekend);
+}
+
+.board__weekday {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.board__date {
+  font-size: 20px;
+  font-weight: 650;
+  line-height: 1.1;
+  grid-row: 2;
+}
+
+.board__count {
+  grid-row: 2;
+  font-size: 12px;
+  color: var(--text-muted);
+  justify-self: end;
+}
+
+.board__scroller {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.board__gutter {
+  position: sticky;
+  left: 0;
+  z-index: var(--z-sticky);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+}
+
+.board__hour {
+  height: var(--hour-h);
+  padding-right: 8px;
+  text-align: right;
+  font-size: 11px;
+  color: var(--text-muted);
+  transform: translateY(-0.6em);
+  font-variant-numeric: tabular-nums;
+}
+
+.day-col {
+  position: relative;
+  height: calc(24 * var(--hour-h));
+  border-left: 1px solid var(--border);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(var(--hour-h) - 1px),
+    var(--grid-line) calc(var(--hour-h) - 1px),
+    var(--grid-line) var(--hour-h)
+  );
+}
+
+.day-col.is-weekend {
+  background-color: var(--weekend);
+}
+
+@media (max-width: 767px) {
+  .board {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+  }
+}

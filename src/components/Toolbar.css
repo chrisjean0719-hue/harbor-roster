@@ -1,0 +1,103 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  padding: 16px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.toolbar__week {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.toolbar__stepper {
+  display: flex;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.toolbar__stepper button {
+  width: 36px;
+  height: 34px;
+  border: 0;
+  background: var(--surface);
+  font-size: 20px;
+  line-height: 1;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.toolbar__stepper button + button {
+  border-left: 1px solid var(--border-strong);
+}
+
+.toolbar__stepper button:hover {
+  background: var(--hover);
+}
+
+.toolbar__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+
+.toolbar__meta {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.toolbar__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.chip:hover {
+  color: var(--text);
+}
+
+.chip[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.toolbar__status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .toolbar {
+    padding: 12px;
+  }
+
+  .toolbar__title {
+    font-size: 18px;
+  }
+}

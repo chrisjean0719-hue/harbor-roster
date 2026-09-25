@@ -1,0 +1,48 @@
+:root {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --bg: #f4f6f9;
+  --surface: #ffffff;
+  --hover: #eef1f5;
+  --border: #e3e7ed;
+  --border-strong: #cfd5de;
+  --grid-line: #edf0f4;
+  --weekend: #fafbfc;
+  --text: #1a2130;
+  --text-muted: #5a6475;
+  --accent: #2f6fed;
+  --accent-soft: #e9f0fe;
+  --danger: #c4372c;
+
+  --topbar-h: 56px;
+  --sidebar-w: 248px;
+  --gutter-w: 56px;
+  --col-min: 120px;
+  --hour-h: 44px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-menu: 0 12px 28px rgb(16 24 40 / 0.14), 0 2px 6px rgb(16 24 40 / 0.08);
+
+  --z-sticky: 20;
+  --z-drawer: 60;
+  --z-overlay: 1000;
+}
+
+.role-nurse {
+  --role-bg: #e8f1ff;
+  --role-border: #b9d1fb;
+  --role-fg: #173a7a;
+}
+
+.role-tech {
+  --role-bg: #e6f6ef;
+  --role-border: #a9dcc3;
+  --role-fg: #125238;
+}
+
+.role-desk {
+  --role-bg: #fdf1e3;
+  --role-border: #f0cf9f;
+  --role-fg: #6b3d07;
+}
