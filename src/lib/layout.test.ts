@@ -4,7 +4,7 @@ import { layoutDay } from './layout';
 
 const shift = (id: string, start: string, end: string): Shift => ({
   id,
-  staffId: 'mchen',
+  assetId: 'berth-a1',
   start: `2026-02-10T${start}`,
   end: `2026-02-10T${end}`,
   status: 'assigned',

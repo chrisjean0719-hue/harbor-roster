@@ -8,6 +8,6 @@ test('renders the roster week', async ({ page }) => {
 
 test('role filter narrows the board', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('button', { name: 'Technician' }).click();
-  await expect(page.locator('.shift.role-nurse')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Crane' }).click();
+  await expect(page.locator('.shift.role-berth')).toHaveCount(0);
 });

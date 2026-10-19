@@ -1,13 +1,13 @@
 import { useState, type ReactNode } from 'react';
-import { CLINIC } from '../data/roster';
+import { HARBOR } from '../data/roster';
 import { StaffLegend } from './StaffLegend';
 import './AppShell.css';
 
 const NAV = [
-  { label: 'Schedule', current: true },
-  { label: 'Time off', current: false },
-  { label: 'Open shifts', current: false },
-  { label: 'Reports', current: false },
+  { label: 'Board', current: true },
+  { label: 'Open bookings', current: false },
+  { label: 'Equipment', current: false },
+  { label: 'Notes', current: false },
 ];
 
 export function AppShell({ children }: { children: ReactNode }) {
@@ -31,9 +31,9 @@ export function AppShell({ children }: { children: ReactNode }) {
           <img src="/favicon.svg" alt="" width="26" height="26" />
           <span>Harbor Roster</span>
         </div>
-        <div className="topbar__clinic">{CLINIC.name}</div>
-        <div className="topbar__avatar" role="img" aria-label="Signed in as Ana Ruiz">
-          AR
+        <div className="topbar__clinic">{HARBOR.name}</div>
+        <div className="topbar__avatar" role="img" aria-label="Harbor desk">
+          HD
         </div>
       </header>
 

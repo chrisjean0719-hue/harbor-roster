@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import type { Shift } from '../data/roster';
-import { staffById } from '../data/roster';
+import { assetsById } from '../data/roster';
 import { useDismiss } from '../hooks/useDismiss';
 import { formatClock, parseLocal, weekdayOf } from '../lib/time';
 import { Portal } from './Portal';
@@ -24,13 +24,13 @@ export function ShiftMenu({ shift, anchor, onClose, onAction }: Props) {
   const rect = anchor.getBoundingClientRect();
   const start = parseLocal(shift.start);
   const end = parseLocal(shift.end);
-  const person = staffById[shift.staffId];
+  const asset = assetsById[shift.assetId];
 
   const items: { action: ShiftAction; label: string; danger?: boolean }[] = [
-    { action: 'edit', label: 'Edit shift…' },
+    { action: 'edit', label: 'Edit booking…' },
     { action: 'swap', label: 'Swap with…' },
-    { action: 'toggle-open', label: shift.status === 'open' ? 'Assign to ' + person.name : 'Mark as open shift' },
-    { action: 'delete', label: 'Delete shift', danger: true },
+    { action: 'toggle-open', label: shift.status === 'open' ? 'Assign to ' + asset.name : 'Mark as open booking' },
+    { action: 'delete', label: 'Delete booking', danger: true },
   ];
 
   return (
@@ -39,11 +39,11 @@ export function ShiftMenu({ shift, anchor, onClose, onAction }: Props) {
         ref={ref}
         className="shift-menu"
         role="menu"
-        aria-label={`Actions for ${person.name}`}
+        aria-label={`Actions for ${asset.name}`}
         style={{ top: rect.bottom + 4, left: rect.right - MENU_WIDTH, width: MENU_WIDTH }}
       >
         <div className="shift-menu__header">
-          <strong>{person.name}</strong>
+          <strong>{asset.name}</strong>
           <span>
             {weekdayOf(start.date)} {formatClock(start.minutes)} – {weekdayOf(end.date)} {formatClock(end.minutes)}
           </span>

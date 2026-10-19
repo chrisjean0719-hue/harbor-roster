@@ -29,19 +29,19 @@
   --z-overlay: 1000;
 }
 
-.role-nurse {
+.role-berth {
   --role-bg: #e8f1ff;
   --role-border: #b9d1fb;
   --role-fg: #173a7a;
 }
 
-.role-tech {
+.role-crane {
   --role-bg: #e6f6ef;
   --role-border: #a9dcc3;
   --role-fg: #125238;
 }
 
-.role-desk {
+.role-launch {
   --role-bg: #fdf1e3;
   --role-border: #f0cf9f;
   --role-fg: #6b3d07;

@@ -1,16 +1,15 @@
 # Harbor Roster
 
-A week-view shift roster for small outpatient clinics. Managers see every shift for the week on a single board,
-filter it by role, and act on individual shifts (mark open, swap, delete) from a per-shift menu.
+A week-view booking board for a small harbor. The harbormaster sees every booking for the week on a single board, filters it by equipment type, and acts on a booking (mark open, swap, delete) from a per-booking menu.
 
 ![stack](https://img.shields.io/badge/stack-React%2019%20%2B%20Vite-2f6fed)
 
 ## Features
 
 - 24-hour week board with a sticky hour gutter and day header
-- Overlapping shifts are packed into side-by-side lanes
-- Role filter (nurse / technician / front desk)
-- Per-shift action menu
+- Overlapping bookings are packed into side-by-side lanes
+- Equipment filter (berth / crane / launch)
+- Per-booking action menu
 - Responsive shell: sidebar on desktop, push drawer below 768px
 
 ## Getting started
@@ -33,20 +32,20 @@ Run `npx playwright install chromium` once before the first `npm run e2e`.
 
 ## Data model
 
-Shift times are clinic-local wall-clock strings (`YYYY-MM-DDTHH:mm`) with no timezone. The roster in
-`src/data/roster.ts` is fictional sample data for the week of **Feb 9, 2026**, including every shift that touches that week. The names are made up. Nothing in this repository is a real clinic export.
+Booking times are harbor-local wall-clock strings (`YYYY-MM-DDTHH:mm`) with no timezone. The sample in
+`src/data/roster.ts` is made-up equipment for the week of **Feb 9, 2026**, including every booking that touches that week. The labels are berths, cranes, and launches. The repository does not store personal or customer data.
 
 ```
 src/
   components/   AppShell, WeekBoard, DayColumn, ShiftCard, ShiftMenu, Toolbar
   hooks/        useElementWidth, useDismiss
   lib/          time helpers and day-column layout
-  data/         sample roster
+  data/         sample bookings
 ```
 
 ## Next
 
-The shift editor and swap actions are still previews. The rest of the planned work, about 29 hours, is in [ROADMAP.md](ROADMAP.md).
+The booking editor and swap actions are still previews. The rest of the planned work, about 29 hours, is in [ROADMAP.md](ROADMAP.md).
 
 ## License
 

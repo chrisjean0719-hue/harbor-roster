@@ -2,7 +2,7 @@
   "name": "harbor-roster",
   "private": true,
   "version": "0.4.0",
-  "description": "Week-view shift roster for small clinics",
+  "description": "Week-view booking board for harbor berths, cranes, and launches",
   "engines": {
     "node": ">=22.12.0"
   },

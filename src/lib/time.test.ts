@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { addDays, formatClock, formatRange, formatWeekRange, parseLocal, weekDates, weekdayOf } from './time';
 
 describe('time', () => {
-  it('parses clinic-local timestamps', () => {
+  it('parses harbor-local timestamps', () => {
     expect(parseLocal('2026-02-13T23:45')).toEqual({ date: '2026-02-13', minutes: 1425 });
     expect(parseLocal('2026-02-14T00:00')).toEqual({ date: '2026-02-14', minutes: 0 });
   });

@@ -1,9 +1,9 @@
-import type { Role } from '../data/roster';
-import { ROLE_LABEL } from '../data/roster';
+import type { Kind } from '../data/roster';
+import { KIND_LABEL } from '../data/roster';
 import { formatWeekRange } from '../lib/time';
 import './Toolbar.css';
 
-type Filter = Role | 'all';
+type Filter = Kind | 'all';
 
 interface Props {
   weekStart: string;
@@ -14,7 +14,7 @@ interface Props {
   onWeek: (delta: number) => void;
 }
 
-const FILTERS: Filter[] = ['all', 'nurse', 'tech', 'desk'];
+const FILTERS: Filter[] = ['all', 'berth', 'crane', 'launch'];
 
 export function Toolbar({ weekStart, filter, shiftCount, status, onFilter, onWeek }: Props) {
   return (
@@ -30,11 +30,11 @@ export function Toolbar({ weekStart, filter, shiftCount, status, onFilter, onWee
         </div>
         <div>
           <h1 className="toolbar__title">{formatWeekRange(weekStart)}</h1>
-          <p className="toolbar__meta">{`${shiftCount} ${shiftCount === 1 ? 'shift' : 'shifts'} this week`}</p>
+          <p className="toolbar__meta">{`${shiftCount} ${shiftCount === 1 ? 'booking' : 'bookings'} this week`}</p>
         </div>
       </div>
 
-      <div className="toolbar__filters" role="group" aria-label="Filter by role">
+      <div className="toolbar__filters" role="group" aria-label="Filter by equipment">
         {FILTERS.map((f) => (
           <button
             key={f}
@@ -43,7 +43,7 @@ export function Toolbar({ weekStart, filter, shiftCount, status, onFilter, onWee
             aria-pressed={filter === f}
             onClick={() => onFilter(f)}
           >
-            {f === 'all' ? 'Everyone' : ROLE_LABEL[f]}
+            {f === 'all' ? 'All equipment' : KIND_LABEL[f]}
           </button>
         ))}
       </div>

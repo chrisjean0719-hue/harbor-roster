@@ -1,5 +1,5 @@
 /**
- * All roster times are clinic-local wall-clock values ("YYYY-MM-DDTHH:mm")
+ * All roster times are harbor-local wall-clock values ("YYYY-MM-DDTHH:mm")
  * with no zone attached. Date arithmetic goes through UTC so the browser's
  * own timezone never leaks into the schedule.
  */
