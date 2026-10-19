@@ -33,8 +33,8 @@ Run `npx playwright install chromium` once before the first `npm run e2e`.
 
 ## Data model
 
-Shift times are clinic-local wall-clock strings (`YYYY-MM-DDTHH:mm`) with no timezone. The sample data in
-`src/data/roster.ts` is an export for the week of **Feb 9, 2026**, and includes every shift that touches that week.
+Shift times are clinic-local wall-clock strings (`YYYY-MM-DDTHH:mm`) with no timezone. The roster in
+`src/data/roster.ts` is fictional sample data for the week of **Feb 9, 2026**, including every shift that touches that week. The names are made up. Nothing in this repository is a real clinic export.
 
 ```
 src/
@@ -43,6 +43,10 @@ src/
   lib/          time helpers and day-column layout
   data/         sample roster
 ```
+
+## Next
+
+The shift editor and swap actions are still previews. The rest of the planned work, about 29 hours, is in [ROADMAP.md](ROADMAP.md).
 
 ## License
 

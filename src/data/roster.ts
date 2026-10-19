@@ -39,9 +39,9 @@ export const staff: Staff[] = [
 export const staffById = Object.fromEntries(staff.map((s) => [s.id, s])) as Record<string, Staff>;
 
 /**
- * Export from the clinic's scheduling system for the week of Feb 9, 2026.
- * The export includes every shift that touches the week, so a night shift
- * that starts on the previous Sunday is included.
+ * Fictional sample roster for the week of Feb 9, 2026.
+ * Names and the clinic are made up. A night shift that starts on the
+ * previous Sunday is included so the week board has something to show.
  */
 export const shifts: Shift[] = [
   { id: 's01', staffId: 'jalvarez', start: '2026-02-08T22:00', end: '2026-02-09T06:00', status: 'assigned', note: 'Night cover' },
